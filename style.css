@@ -155,7 +155,8 @@ ul li a:hover {
 footer {
     padding: 24px 0;
     text-align: center;
-    font-size: 14px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 

@@ -6,7 +6,6 @@
 
 body{
     background: var(--bg-url) no-repeat top center/cover;
-    height: 100vh;
 }
 
 :root{
@@ -25,11 +24,10 @@ border-radius: 15px;
     font-size: 30px;
     font-family: 'Pacifico', cursive;
     animation-name: fadein;
-    animation-duration: 0.5s;
+    animation-duration: 1.5s;
     margin-top: 20px;
-    
+  
 }
-
 
 /* texto principal */
 #segundo {
@@ -44,19 +42,18 @@ border-radius: 15px;
     backdrop-filter: blur(5px); 
     background-clip: padding-box; 
     animation-name: fadein;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
 }
 
-/* footer{
+ footer{
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 30%;
     display: block;
     text-align: center;
-    font-size: 18px;
+    font-size: 15px;
     color: white;
     font-family: 'Courier New', Courier, monospace;
 }
-*/
 
 /* animation */
 @keyframes fadein{
@@ -69,7 +66,7 @@ border-radius: 15px;
     }
 }
 
-
+ /* responsividade*/
 @media (min-width: 700px){
     :root {
         --bg-url: url(./assets/bg-desktop.jpg)
