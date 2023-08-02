@@ -6,6 +6,8 @@
 
 body{
     background: var(--bg-url) no-repeat top center/cover;
+    margin-right: 10%;
+    margin-left:10% ; 
 }
 
 :root{
@@ -13,8 +15,8 @@ body{
 }
 
 header{
-margin: 5px 10px;
-border-radius: 15px;
+    margin: 5px 10px;
+    border-radius: 15px;
 }
 
 /* cabeçalho */
@@ -24,9 +26,8 @@ border-radius: 15px;
     font-size: 30px;
     font-family: 'Pacifico', cursive;
     animation-name: fadein;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
     margin-top: 20px;
-  
 }
 
 /* texto principal */
@@ -34,9 +35,9 @@ border-radius: 15px;
     color: white;
     font-size: 20px;
     text-align: left;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.1); 
-    margin: 20px 15%;
+    margin: 30px;
     display: block;
     padding: 5px 5px;
     backdrop-filter: blur(5px); 
@@ -53,6 +54,8 @@ border-radius: 15px;
     font-size: 15px;
     color: white;
     font-family: 'Courier New', Courier, monospace;
+    animation-name: fadein;
+    animation-duration: 2s;
 }
 
 /* animation */
@@ -60,7 +63,6 @@ border-radius: 15px;
     from {
         opacity: 0;
     }
-
     to{
         opacity: 1;
     }
@@ -69,6 +71,8 @@ border-radius: 15px;
  /* responsividade*/
 @media (min-width: 700px){
     :root {
-        --bg-url: url(./assets/bg-desktop.jpg)
+        --bg-url: url(./assets/bg-desktop.jpg);
     }
 }
+
+
