@@ -6,12 +6,66 @@
 
 body{
     background: var(--bg-url) no-repeat top center/cover;
-    margin-right: 10%;
-    margin-left:10% ; 
+    margin-right: 5%;
+    margin-left:5% ; 
 }
 
 :root{
+    --text-color: white;
     --bg-url: url(./assets/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(255, 255, 255, 0.05);
+    --highlight-color: rgba(255, 255, 255, 0.2);
+    --switch-bg-url: url(./assets/MoonStars.svg);
+}
+
+.light{
+    --text-color: rgb(0, 0, 0);
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+    --switch-bg-url: url(./assets/Sun.svg);  
+}
+
+/* switch */
+#switch{
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%; 
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: slide-out 0.3s;   
+}
+
+.light #switch button{
+    animation:slide-in 0.3s forwards;
+}
+
+#switch button:hover{
+    outline: 8px solid var(--highlight-color);
+}
+
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    border-radius: 9999px;
 }
 
 header{
@@ -21,7 +75,7 @@ header{
 
 /* cabeçalho */
 #principal{
-    color: white;
+    color: var(--text-color);
     text-align: center;
     font-size: 30px;
     font-family: 'Pacifico', cursive;
@@ -31,19 +85,21 @@ header{
 }
 
 /* texto principal */
-#segundo {
-    color: white;
+#segundo{
+    color: var(--text-color);
     font-size: 20px;
     text-align: left;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.1); 
+    background: var(--surface-color); 
+    border: 1px solid var(--stroke-color);
     margin: 30px;
     display: block;
     padding: 5px 5px;
-    backdrop-filter: blur(5px); 
+    backdrop-filter: blur(10px); 
     background-clip: padding-box; 
     animation-name: fadein;
     animation-duration: 2s;
+    
 }
 
  footer{
@@ -52,7 +108,7 @@ header{
     display: block;
     text-align: center;
     font-size: 15px;
-    color: white;
+    color: var(--text-color);
     font-family: 'Courier New', Courier, monospace;
     animation-name: fadein;
     animation-duration: 2s;
@@ -68,11 +124,35 @@ header{
     }
 }
 
+@keyframes slide-in{
+    from{
+        left: 0;
+    }
+    
+    to{
+        left:50%;
+    }
+
+}
+
+@keyframes slide-out{
+    from {
+        left: 50%;
+    }
+    to{
+        left: 0;
+    }
+
+}
+
  /* responsividade*/
-@media (min-width: 700px){
+ @media (min-width: 700px){
     :root {
         --bg-url: url(./assets/bg-desktop.jpg);
     }
-}
 
+    .light{
+        --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
+}
 

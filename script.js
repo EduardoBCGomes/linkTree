@@ -9,8 +9,4 @@ function toggleMode(){
     }else{
         img.setAttribute('src', './assets/eduardo_black.png')
     }
-
-
-
 }
-
