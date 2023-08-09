@@ -69,8 +69,7 @@ body{
 }
 
 header{
-    margin: 5px 10px;
-    border-radius: 15px;
+    margin: 15px 10px;
 }
 
 /* cabeçalho */
@@ -81,7 +80,7 @@ header{
     font-family: 'Pacifico', cursive;
     animation-name: fadein;
     animation-duration: 2s;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 /* texto principal */
@@ -98,8 +97,7 @@ header{
     backdrop-filter: blur(10px); 
     background-clip: padding-box; 
     animation-name: fadein;
-    animation-duration: 2s;
-    
+    animation-duration: 2s; 
 }
 
  footer{
