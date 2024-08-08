@@ -8,6 +8,8 @@ body{
     background: var(--bg-url) no-repeat top center/cover;
     margin-right: 5%;
     margin-left:5% ; 
+    animation: fade;
+   
 }
 
 :root{
@@ -20,22 +22,26 @@ body{
     --switch-bg-url: url(./assets/MoonStars.svg);
 }
 
-.light{
+/*.light{
     --text-color: rgb(0, 0, 0);
     --bg-url: url(./assets/bg-mobile-light.jpg);
     --stroke-color: rgba(0, 0, 0, 0.5);
     --surface-color: rgba(0, 0, 0, 0.05);
     --surface-color-hover: rgba(0, 0, 0, 0.02);
     --highlight-color: rgba(0, 0, 0, 0.1);
-    --switch-bg-url: url(./assets/Sun.svg);  
+    --switch-bg-url: url(./assets/Sun.svg); 
 }
+    */
 
-/* switch */
+
+/* switch 
 #switch{
     position: relative;
     width: 64px;
     margin: 4px auto;
 }
+    
+
 
 #switch button{
     width: 32px;
@@ -49,6 +55,7 @@ body{
     transform: translateY(-50%);
     animation: slide-out 0.3s;   
 }
+
 
 .light #switch button{
     animation:slide-in 0.3s forwards;
@@ -71,6 +78,7 @@ body{
 header{
     margin: 15px 10px;
 }
+    */
 
 /* cabeçalho */
 #principal{
@@ -134,7 +142,7 @@ header{
 }
 
 @keyframes slide-out{
-    from {
+    from{
         left: 50%;
     }
     to{
